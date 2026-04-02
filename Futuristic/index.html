@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <script src="js/script.js"></script>
+    <title>Ronald's blog</title>
+</head>
+<style>
+    body{
+        background-image:url(img/fiction.jpg);
+    }
+</style>
+<body>
+    <header>
+        <h1>Title</h1>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <nav class="menu-icon">
+            <a href="#">Home</a>
+            <a href="#">Shop</a>
+            <a href="#">Donation</a>
+            <div class="dropdown">
+                <a href="#" class="dropdown-toggle">Contact Us</a>
+                <div class="dropdown-content">
+                    <a href="https://www.facebook.com/profile.php?id=100089188449278">Facebook</a>
+                    <a href="https://www.instagram.com/grxcaz/">Instagram</a>
+                    <a href="https://x.com/gznc10">X</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="body-container">
+        <section>
+            <h2>About Me</h2>
+            <div class="picture">
+                <img src="https://via.placeholder.com/350" alt="Profile Picture" style="border-radius:50%; width:100%; height:100%;">
+            </div>
+            <p class="Bio">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem rerum, praesentium tenetur odio dolore voluptatibus aspernatur molestias illum eligendi cupiditate voluptatum est necessitatibus omnis molestiae, commodi dolorum delectus facilis non?</p>
+           <div class="btn-container">
+                <button class="btn Fb">
+                    <?xml version="1.0" ?><svg data-name="Layer 1" id="Layer_1" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <style>
+                                .cls-1 {
+                                    fill: none;
+                                    stroke: #fffff;
+                                    stroke-miterlimit: 10;
+                                    stroke-width: 6.5px;
+                                }
+                            </style>
+                        </defs>
+                        <title/>
+                        <path class="cls-1"
+                            d="M53.68,38.26v15.1H37.11V72H53.68v42H73.29V72H90l2-18.63H73.29V38.26c0-2.67,2.11-4,3-4.82,1.57-1.34,9.15-1.55,9.15-1.55h7.43V15a93.26,93.26,0,0,0-11.68-1C53.11,14,53.68,38.26,53.68,38.26Z" />
+                    </svg>
+                </button>
+                <button class="btn Ig"><?xml version="1.0" ?><svg data-name="Layer 1" id="Layer_1" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <style>
+                            .cls-1 {
+                                fill: #ffffff;
+                            }
+                        </style>
+                    </defs>
+                    <title />
+                    <path class="cls-1"
+                        d="M83,23a22,22,0,0,1,22,22V83a22,22,0,0,1-22,22H45A22,22,0,0,1,23,83V45A22,22,0,0,1,45,23H83m0-8H45A30.09,30.09,0,0,0,15,45V83a30.09,30.09,0,0,0,30,30H83a30.09,30.09,0,0,0,30-30V45A30.09,30.09,0,0,0,83,15Z" />
+                    <path class="cls-1" d="M90.14,32a5.73,5.73,0,1,0,5.73,5.73A5.73,5.73,0,0,0,90.14,32Z" />
+                    <path class="cls-1"
+                        d="M64.27,46.47A17.68,17.68,0,1,1,46.6,64.14,17.7,17.7,0,0,1,64.27,46.47m0-8A25.68,25.68,0,1,0,90,64.14,25.68,25.68,0,0,0,64.27,38.47Z" />
+                </svg>
+                    </button> 
+                <button class="btn X">
+                    <?xml version="1.0" ?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                        id="Layer_1" width="80px" height="80px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" fill="white"
+                        xml:space="preserve">
+                        <path
+                            d="M14.095479,10.316482L22.286354,1h-1.940718l-7.115352,8.087682L7.551414,1H1l8.589488,12.231093L1,23h1.940717  l7.509372-8.542861L16.448587,23H23L14.095479,10.316482z M11.436522,13.338465l-0.871624-1.218704l-6.924311-9.68815h2.981339  l5.58978,7.82155l0.867949,1.218704l7.26506,10.166271h-2.981339L11.436522,13.338465z" />
+                    </svg>
+                </button>
+            </div>
+        </section>
+    <!-- Progression bars -->
+        <div class="container">
+            <div class="skill-box">
+                <span class="title">HTML</span>
+                <div class="skill-bar">
+                    <span class="skill-per html" data-width="44%">
+                        <span class="tooltip">44%</span>
+                    </span>
+                </div>
+            </div>
+            <div class="skill-box">
+                <span class="title">CSS</span>
+                <div class="skill-bar">
+                    <span class="skill-per css" data-width="33%">
+                        <span class="tooltip">33%</span>
+                    </span>
+                </div>
+            </div>
+            <div class="skill-box">
+                <span class="title">JavaScript</span>
+                <div class="skill-bar">
+                    <span class="skill-per javascript" data-width="21%">
+                        <span class="tooltip">21%</span>
+                    </span>
+                </div>
+            </div>
+            <div class="skill-box">
+                <span class="title">Python</span>
+                <div class="skill-bar">
+                    <span class="skill-per python" data-width="4%">
+                        <span class="tooltip">4%</span>
+                    </span>
+                </div>
+            </div>
+            <div class="skill-box">
+                <span class="title">Java</span>
+                <div class="skill-bar">
+                    <span class="skill-per java" data-width="4%">
+                        <span class="tooltip">4%</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

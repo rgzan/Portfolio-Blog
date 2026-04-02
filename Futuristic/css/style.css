@@ -1,0 +1,319 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    background-image:url('img/fiction.jpg');
+    height:100vh;
+    background-size: cover;
+    background-position:center;
+    background-repeat: no-repeat;
+    margin:0;
+}
+/* Navbar Container */
+header{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    position:relative;
+    box-shadow: 0px 1px 5px #000000;
+    width:100%;
+    background:#000000aa;
+}
+h1{
+    cursor:pointer;
+    font-size:75px;
+    margin-left:32px;
+    color:#c6c6c6;
+}
+.hamburger{
+    display:none;
+    flex-direction:column;
+    justify-content: space-between;
+    width:40px;
+    height:35px;
+    cursor:pointer;
+}
+.hamburger .bar{
+    width:100%;
+    height:100%;
+    background:rgb(190, 182, 143);
+    margin:3px 0;
+    transition: 0.3s;
+}
+.hamburger:hover .bar{
+    background:#58d0a6;
+}
+.hamburger:active {
+    transform:rotate(360deg);
+}
+.menu-icon {
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    margin-right:10px;
+    gap:10px;
+}
+@media (max-width: 780px) {
+    .hamburger{
+        display:flex;
+    }
+    .menu-icon {
+        display: none; /* Hidden by default */
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        right: 20px;
+        background: #000000aa;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .menu-icon.open {
+        display: flex; /* Show menu when .open class is added */
+    }
+}
+a{
+    color:#ececec;
+    display:flex;
+    align-items: center;
+    text-decoration: none;
+    height:80px;
+    text-align: center;
+    font-size: 32px;
+    transition: 0.5s;
+    padding:0;
+}
+a:hover{
+    background:#58d0a6;
+    color:black;
+    box-shadow: inset 0 0 5px 0;
+}
+.dropdown{
+    position:relative;
+}
+.dropdown-content{
+    display:none;
+    position: absolute;
+    top:100%;
+    left:0;
+    background:#000000aa;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+    border-radius:5px;
+    overflow:hidden;
+    z-index:10;
+    transition:opacity 0.3s ease, transform 0.3s ease;
+    opacity:0;
+    transform:translateY(-10px);
+}
+.dropdown:hover .dropdown-content,
+.dropdown.open .dropdown-content {
+    display:block;
+    opacity: 1;
+    transform: translateY(0);
+}
+.dropdown-content a{
+    text-align: center;
+    height:50px;
+    background-color: #000000aa;
+    color: #ececec;
+    transition:background 0.3s;
+}
+.dropdown-content a:hover{
+    background:#58d0a6;
+    color:black;
+    box-shadow: inset 0 0 5px 0;
+}
+.dropdown:hover .dropdown-content{
+    display:block;
+}
+.body-container{
+    margin-top:50px;
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width:100%;
+}
+section{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 24px;
+    padding: 10px;
+    background: #cdcdcd91;
+    border-radius: 10px;
+}
+h2{
+    display:flex;
+    font-size:50px;
+    justify-content: center;
+    margin-top: 10px;
+    text-align: center;
+}
+.picture{
+    display:flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width:350px;
+    height:350px;
+    background:black;
+    border-radius:50%;
+}
+.Bio{
+    display:flex;
+    align-items: center;
+    text-align: center;
+    font-size:24px;
+    width:600px;
+}
+.btn-container{
+    display:flex;
+    justify-content: center;
+}
+.btn{
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    background: #000000;
+    color: #ececec;
+    border: none;
+    padding: 10px 20px;
+    font-size: 24px;
+    margin: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: -1px -2px 4px white,
+                 1px 3px 4px white;
+}
+.btn:hover.Fb{
+    background: #3b5998;
+    box-shadow: -1px -2px 4px #3b5998,
+                 1px 3px 4px #3b5998;
+}
+.btn:hover.Ig{
+    background: linear-gradient(to bottom, #e1306c, #fba732);
+    box-shadow: -1px -2px 4px #e1306c,
+                 1px 3px 4px #fba732;
+}
+.btn:hover.X{
+    background: #1da1f2;
+    box-shadow: -1px -2px 4px #1da1f2,
+                 1px 3px 4px #1da1f2;
+}
+/* Progress bar */
+.container{
+    display:flex;
+    flex-direction: column;
+    width:25%;
+    height:35vh;
+    background: #333;
+    padding:10px 20px;
+    border-radius:7px;
+    color:white;
+}
+.container .skill-box{
+    width:100%;
+    margin:15px 0;
+}
+.skill-box .title{
+    display:block;
+    font-size:14px;
+    font-weight:600;
+    color:white;
+}
+.skill-box .skill-bar{
+    height:8px;
+    width:100%;
+    border-radius:6px;
+    margin-top:6px;
+    background:rgba(0,0,0,0.1);
+}
+.skill-bar .skill-per{
+    position:relative;
+    display:block;
+    height:100%;
+    width:44%;
+    border-radius:6px;
+    background:orangered;
+    animation:progress 0.9s ease-in-out forwards;
+    opacity: 0;
+}
+.skill-per.css{
+    width:33%;
+    animation-delay:0.01s;
+    background:#4070f4;
+}
+.skill-per.javascript{
+    width:21%;
+    animation-delay:0.01s;
+    background:orange;
+}
+.skill-per.python{
+    width:4%;
+    animation-delay:0.01s;
+    background:rgb(0, 87, 174);
+}
+.skill-per.java{
+    width:4%;
+    animation-delay:0.01s;
+    background:linear-gradient(210deg,#ff8c00,#0162ff);
+}
+@keyframes progress {
+    0%{
+        width:0;
+        opacity: 0;
+    }
+    100%{
+        opacity:1;
+    }
+}
+.skill-per .tooltip{
+    position:absolute;
+    right:-14px;
+    top:-28px;
+    font-size:9px;
+    font-weight:500;
+    color:#fff;
+    padding:2px 6px;
+    border-radius:3px;
+    background: #4070f4;
+    z-index:1;
+}
+.tooltip::before{
+    content:'';
+    position:absolute;
+    left:50%;
+    bottom:-2px;
+    height:10px;
+    width:10px;
+    z-index:-1;
+    background:#4070f4;
+    transform:translateX(-50%) rotate(45deg);
+}
+@media (max-width: 780px) {
+    .container {
+        position: absolute; /* Position the container at the bottom */
+        bottom: -300px;
+        left: 0;
+        width: 100%; /* Ensure it spans the full width */
+        padding: 20px;
+        background: rgba(0, 0, 0, 0.8); /* Add a background for better visibility */
+        box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.2);
+        border-radius: 0; /* Remove border-radius for a cleaner look */
+    }
+
+    .skill-box {
+        margin: 15px 0; /* Adjust spacing between skill boxes */
+    }
+
+    .skill-box .title {
+        font-size: 12px; /* Reduce font size for smaller screens */
+    }
+
+    .skill-bar {
+        height: 6px; /* Reduce the height of the bars */
+    }
+}
